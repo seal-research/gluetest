@@ -1,6 +1,6 @@
-# Integration of Apache Commons CLI with GraalVM and Python
+# Artifact for GlueTest
 
-This is an artifact for our submission: for "Partial Code Translation Validation via Language Interoperability". It contains the following directories: 
+This is an artifact for the paper, "GlueTest: Testing Code Translation via Language Interoperability" presented at ICSME 2024 NIER. It contains the following directories: 
 
 1. `commons-cli` and `commons-csv`: original Commons CLI and CSV source code and tests
 2. `commons-cli-python` and `commons-csv-python`: translated code and tests in python
