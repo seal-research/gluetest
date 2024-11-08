@@ -1,4 +1,4 @@
-# Artifact for GlueTest
+# GlueTest: Testing Code Translation via Language Interoperability
 
 This is an artifact for the paper, "GlueTest: Testing Code Translation via Language Interoperability" presented at ICSME 2024 NIER. It contains the following directories: 
 
