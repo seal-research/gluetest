@@ -79,3 +79,15 @@ The glue code automation will generate the files under the `generated/commons-cl
 
 ## Collecting Clients
 We provide the scripts for scraping clients under `scripts/clients/selenium.py`. The `scripts/clients/bash_script_version.sh` script can further be used to extract the versions of the libraries used by the clients.
+
+# Citation
+
+```bibtex
+@inproceedings{gluetest,
+  title={GlueTest: Testing Code Translation via Language Interoperability}, 
+  author={Abid, Muhammad Salman and Pawagi, Mrigank and Adhikari, Sugam and Cheng, Xuyan and Badr, Ryed and Wahiduzzaman, Md and Rathi, Vedant and Qi, Ronghui and Li, Choiyin and Liu, Lu and Naidu, Rohit Sai and Lin, Licheng and Liu, Que and Palak, Asif Zubayer and Haque, Mehzabin and Chen, Xinyu and Marinov, Darko and Dutta, Saikat}, 
+  booktitle={IEEE International Conference on Software Maintenance and Evolution},
+  year={2024},
+  doi={10.1109/ICSME58944.2024.00061}
+}
+```
