@@ -1,23 +1,30 @@
 # GlueTest: Testing Code Translation via Language Interoperability
 
-This is an artifact for the paper, "GlueTest: Testing Code Translation via Language Interoperability" presented at ICSME 2024 NIER. It contains the following directories: 
+This is an artifact for the paper "GlueTest: Testing Code Translation via Language Interoperability", presented at ICSME 2024 NIER ([🔗 link](https://doi.org/10.1109/ICSME58944.2024.00061)). The artifact repository is organized as follows:
 
-1. `commons-cli` and `commons-csv`: original Commons CLI and CSV source code and tests
-2. `commons-cli-python` and `commons-csv-python`: translated code and tests in python
-3. `commons-cli-graal` and `commons-csv-graal`: python source code, java tests, and (Java) glue code for GraalVM
-4. `graal-glue-generator`: contains the source code for the glue code generator
-5. `scripts`: contains scripts run local coverage, coverage through CI, collecting clients, and generating glue code.
+| Project Title | Folder Name | Description |
+|---------------|-------------|-------------|
+| Commons CLI | `commons-cli` | Original Commons CLI source code and tests |
+|  | `commons-cli-python` | Translated code and tests exclusively in Python |
+|  | `commons-cli-graal` | Python source code, Java tests, and (Java) glue code for GraalVM |
+| Commons CSV | `commons-csv` | Original Commons CSV source code and tests |
+|  | `commons-csv-python` | Translated code and tests exclusively in Python |
+|  | `commons-csv-graal` | Python source code, Java tests, and (Java) glue code for GraalVM |
+| Graal Glue Generator | `graal-glue-generator` | Contains the source code for the glue code generator |
+| Scripts | `scripts` | Contains scripts to run local coverage, coverage through CI, collecting clients, and generating glue code |
 
 ## Setting up GraalVM and GraalPython
 
-To run the GraalVM integration, we need to install the GraalVM SDK and the python component. To install GraalVM, we use the SDKMAN! tool. To install SDKMAN!, run the following command [from the SDKMAN! website](https://sdkman.io/install):
+To run the GraalVM integration, we need to install the GraalVM SDK and the python language component. To install GraalVM, we use the SDKMAN! tool. To install SDKMAN!, run the following command [from the SDKMAN! website](https://sdkman.io/install):
 ```bash
 curl -s "https://get.sdkman.io" | bash
 ```
-After installing SDKMAN!, we can install GraalVM (Java 17) using the following command from their [website](https://www.graalvm.org/downloads/):
+After installing SDKMAN!, install GraalVM (Java 17) using the following command from their [website](https://www.graalvm.org/downloads/):
 ```bash
 sdk install java 17.0.7-graal
 ```
+> [!NOTE] Later revisions re-work how GraalPython is installed. `17.0.7` is the latest version with `gu` support.
+
 After installing GraalVM, we need to install the python component. To do so, we run:
 ```bash
 gu install python
@@ -38,7 +45,7 @@ mvn -f commons-cli/pom.xml test -Drat.skip
 # Commons CSV
 mvn -f commons-csv/pom.xml test -Drat.skip
 ```
-> NOTE: This step requires maven to be installed. If maven is not installed, see [their web page](https://maven.apache.org/install.html) for installation instructions.
+> [!NOTE]: This step requires maven to be installed. If maven is not installed, see [their web page](https://maven.apache.org/install.html) for installation instructions.
 
 ### Running the translated Python Tests
 
@@ -53,7 +60,7 @@ pytest commons-cli-python
 # Commons CSV
 pytest commons-csv-python
 ```
-> NOTE: We use CPython 3.11.4 for running our translation tests. Please ensure a compatible of Python is installed before running tests.
+> [!NOTE]: We use CPython 3.11.4 for running our translation tests. Please ensure a compatible of Python is installed before running tests.
 
 ### Running glue code tests with GraalVM
 ```bash
