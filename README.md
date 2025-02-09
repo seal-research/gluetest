@@ -23,7 +23,8 @@ After installing SDKMAN!, install GraalVM (Java 17) using the following command 
 ```bash
 sdk install java 17.0.7-graal
 ```
-> [!NOTE] Later revisions re-work how GraalPython is installed. `17.0.7` is the latest version with `gu` support.
+> [!NOTE]
+> Later revisions re-work how GraalPython is installed. `17.0.7` is the latest version with `gu` support.
 
 After installing GraalVM, we need to install the python component. To do so, we run:
 ```bash
@@ -45,7 +46,8 @@ mvn -f commons-cli/pom.xml test -Drat.skip
 # Commons CSV
 mvn -f commons-csv/pom.xml test -Drat.skip
 ```
-> [!NOTE]: This step requires maven to be installed. If maven is not installed, see [their web page](https://maven.apache.org/install.html) for installation instructions.
+> [!NOTE]
+> This step requires maven to be installed. If maven is not installed, see [their web page](https://maven.apache.org/install.html) for installation instructions.
 
 ### Running the translated Python Tests
 
@@ -60,7 +62,8 @@ pytest commons-cli-python
 # Commons CSV
 pytest commons-csv-python
 ```
-> [!NOTE]: We use CPython 3.11.4 for running our translation tests. Please ensure a compatible of Python is installed before running tests.
+> [!NOTE]
+> We use CPython 3.11.4 for running our translation tests. Please ensure a compatible of Python is installed before running tests.
 
 ### Running glue code tests with GraalVM
 ```bash
